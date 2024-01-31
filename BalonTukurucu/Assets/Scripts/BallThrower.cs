@@ -6,6 +6,7 @@ using UnityEngine.UIElements;
 
 public class BallThrower : MonoBehaviour
 {
+    public Transform bt;
     public Transform FirePoint;
     public float BulletForce = 100;
     public float FireRate = 1;
@@ -85,7 +86,8 @@ public class BallThrower : MonoBehaviour
 
     private void AciDegistir()
     {
-
+        float rastgeleRotationY = Random.Range(120f, 240f);
+        bt.rotation = Quaternion.Euler(0f, rastgeleRotationY, 0f);
     }
 
     public void Awake(){
